@@ -19,12 +19,24 @@ export function TvPage() {
 
   return (
     <>
-      <h1>{tvshow.original_name}</h1>
-      <p>{tvshow.overview}</p>
-      <img
-        src={`https://image.tmdb.org/t/p/w500/${tvshow.backdrop_path}`}
-        alt="poster-img"
-      />
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <h1>{tvshow.original_name}</h1>
+            <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+              <figure class="figure">
+                <img
+                  src={`https://image.tmdb.org/t/p/w500/${tvshow.backdrop_path}`}
+                  class="figure-img img-fluid rounded"
+                  alt="poster-img"
+                />
+                <figcaption class="figure-caption"></figcaption>
+              </figure>
+            </div>
+            <p>{tvshow.overview}</p>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

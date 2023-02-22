@@ -30,12 +30,26 @@ export function MoviePage() {
 
   return (
     <>
-      <h1>{movie.original_title}</h1>
-      <p>{movie.overview}</p>
-      <img
-        src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
-        alt="poster-img"
-      />
+      <div class="p-3 mb-2 bg-dark-subtle text-emphasis-dark">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <h1>{movie.original_title}</h1>
+              <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <figure class="figure">
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+                    class="figure-img img-fluid rounded"
+                    alt="poster-img"
+                  />
+                  <figcaption class="figure-caption"></figcaption>
+                </figure>
+              </div>
+              <p>{movie.overview}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
